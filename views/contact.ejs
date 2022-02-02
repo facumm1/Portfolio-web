@@ -1,0 +1,18 @@
+<%- include("template/cabecera", {tituloPagina : "Contacto"}) %>}
+
+<%- include("template/navbar")  %> 
+
+<div class="div__contact-box">
+    <h1 class="div__h1">Contacto</h1>
+    <div class="div__message">
+        <p>¡Si estas interesado en contactarte conmigo no dudes en escribirme!</p>
+    </div>
+    <form class="div__form" id="form">
+        <input name="nombre" class="input-name" type="text" placeholder="Nombre">
+        <input name="email" class="input-email" type="email" placeholder="Tu email">
+        <textarea name="mensaje" placeholder="Deja tu mensaje" cols="10" rows="10"></textarea>
+        <button type="submit" >Enviar</button>
+    </form>
+    <a href="mailto:facundomm1@gmail.com" id="mail"></a>
+</div>
+<script src="script-contact.js"></script>
