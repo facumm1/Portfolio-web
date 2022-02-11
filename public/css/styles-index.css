@@ -1,0 +1,140 @@
+/* ------------------------ General -------------------------- */
+
+*{
+    margin: 0;
+}
+
+body{
+    /* background: url(/assets/images/faded-background.jpg); */
+    background-color: #33415c;
+    color: #fff;
+    font-family: 'Prompt', sans-serif;
+}
+
+/* ------------------------ Header -------------------------- */
+header{
+    /* border: 1px solid #fff; */
+    width: 40%;
+    margin: 5rem auto .25rem auto;
+}
+
+.header__navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.header__navbar > a{
+    border-radius: .5rem;
+    color: #fff;
+    margin: 2.5rem 0;
+    text-decoration: none;
+    font-size: 2em;   
+}
+
+.header__navbar a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.header__navbar a span:first-child {
+    display: inline-block;
+    padding: .5rem 3rem;
+    font-size: 1.2em;
+}
+
+.header__navbar a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    font-size: .8em;
+}
+
+.header__navbar a span {
+    transition: transform 0.2s ease-out;
+}
+
+.header__navbar a:hover span:first-child {
+    transform: translateY(100%);
+}
+  
+.header__navbar a:hover span:last-child {
+    transform: none;
+}
+
+/* ------------------------ Main -------------------------- */
+.container{
+    background-color: #fdfffc;
+    border-radius: .5rem;
+    color: #000;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 45%;
+}
+
+.main__photo{
+    max-width: 22.5em;
+}
+
+.main__title{
+    display: flex;
+    flex-flow: column nowrap;
+    font-weight: 300;
+    margin: auto 0 auto 3rem;
+}
+
+.main__title > h3{
+    font-weight: 200;
+}
+
+/* ------------------------ Footer -------------------------- */
+footer{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 0 auto;
+}
+
+.tecno-site{
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+/* ------------------------ Responsive -------------------------- */
+
+@media (min-width: 50px) and (max-width: 1000px){
+    
+    header{
+        width: 30%;
+        margin: 0 auto .25rem auto;
+    }
+
+    .container{
+        flex-flow: column nowrap;
+        max-width: 100%;
+    }
+
+    .main__title{
+        margin: 5rem auto;
+        max-width: 100%;
+    }
+
+    .main__photo{
+        max-width: 100%;
+    }
+
+    .header__navbar > a{
+        font-size: 2.5em;
+    }
+}

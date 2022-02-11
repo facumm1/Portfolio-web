@@ -1,0 +1,180 @@
+/* ------------------------ General -------------------------- */
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #33415c;
+    color: #fff;
+    font-family: 'Prompt', sans-serif;
+}
+
+/* ------------------------ Header -------------------------- */
+header{
+    width: 40%;
+    margin: 5rem auto .25rem auto;
+}
+
+.header__navbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.header__navbar > a{
+    border-radius: .5rem;
+    color: #fff;
+    margin: 2.5rem 0;
+    text-decoration: none;
+    font-size: 2em;   
+}
+
+.header__navbar a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.header__navbar a span:first-child {
+    display: inline-block;
+    padding: .5rem 3rem;
+    font-size: 1.2em;
+}
+
+.header__navbar a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    font-size: .8em;
+}
+
+.header__navbar a span {
+    transition: transform 0.2s ease-out;
+}
+
+.header__navbar a:hover span:first-child {
+    transform: translateY(100%);
+}
+  
+.header__navbar a:hover span:last-child {
+    transform: none;
+}
+
+/* ------------------------ Main -------------------------- */
+.container__works{
+    background-color: #fdfffc;
+    border-radius: .5rem;
+    color: #000;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    padding: .5rem 3rem;
+    max-width: 55%;
+}
+
+.works__title{
+    margin: 0 auto;
+}
+
+.main__proyectos-div{
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 100%;
+}
+
+.main__proyectos-div > div{
+    background-color: #192336;
+    border-radius: 1rem;
+    color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1rem .5rem;
+    min-width: 10%;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.main__proyectos-div div h3{
+    padding: 1rem .5rem;
+    width: 90%;
+}
+
+.main__proyectos-div div img{
+    filter: blur(1px);
+    height: 15vh;
+    margin: .5rem auto;
+    max-width: 100%;
+}
+
+p{
+    margin: 1rem 0;
+}
+
+.see-app{
+    border: none;
+    border-radius: .25rem;
+    font-size: 1.1em;
+    margin: 0 0 1rem 0;
+}
+
+.fa-github{
+    border: none;
+    border-radius: .25rem;
+    font-size: 2em;
+}
+
+.card__buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.card__buttons button{
+    margin: .5rem;
+}
+
+.card__buttons > button:hover{
+    background-color: #d9d9d9;
+    transition-duration: .5s;
+}
+
+.card__buttons > button:active{
+    background-color: #b3b3b3;
+    transition-duration: .5s;
+}
+
+/* ------------------------ Responsive -------------------------- */
+
+@media (min-width: 50px) and (max-width: 1000px){
+    
+    header{
+        width: 30%;
+        margin: 0 auto .25rem auto;
+    }
+
+    .container{
+        flex-flow: column nowrap;
+        max-width: 100%;
+    }
+
+    .main__title{
+        margin: 5rem auto;
+        max-width: 100%;
+    }
+
+    .main__photo{
+        max-width: 100%;
+    }
+
+    .header__navbar > a{
+        font-size: 2.5em;
+    }
+}
